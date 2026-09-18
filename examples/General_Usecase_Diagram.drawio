@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-09-15T23:18:17.841Z" agent="Antigravity/Draw.io" version="24.7.5">
+  <diagram id="general_usecase_bw" name="General Use Case Diagram (Trắng Xám)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="760">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- SYSTEM BOUNDARY -->
+    <mxCell id="sys_boundary" value="General Usecase" style="shape=swimlane;startSize=32;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontStyle=1;fontSize=13;fontColor=#111827;align=center;collapsible=0;html=1;" vertex="1" parent="1">
+      <mxGeometry x="170" y="30" width="760" height="690" as="geometry"/>
+    </mxCell>
+
+    <!-- ACTORS (Grayscale: White fill, Black stroke) -->
+    <mxCell id="actor_user" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.6;fontColor=#111827;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="335" width="45" height="85" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="actor_admin" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.6;fontColor=#111827;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="990" y="335" width="45" height="85" as="geometry"/>
+    </mxCell>
+
+    <!-- USE CASES (11 Ellipses - Pure White with Black Borders) -->
+    <!-- 1. Login -->
+    <mxCell id="uc_login" value="Login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="90" y="50" width="115" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- 2. Select Team -->
+    <mxCell id="uc_select_team" value="Select Team" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="85" y="145" width="120" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- 3. Update Task Status -->
+    <mxCell id="uc_update_status" value="Update Task Status" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="230" y="125" width="145" height="52" as="geometry"/>
+    </mxCell>
+
+    <!-- 4. Submit Check-in -->
+    <mxCell id="uc_submit_checkin" value="Submit Check-in" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="150" y="235" width="135" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- 5. Manage Tasks -->
+    <mxCell id="uc_manage_tasks" value="Manage Tasks" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="250" y="340" width="135" height="52" as="geometry"/>
+    </mxCell>
+
+    <!-- 6. Submit Report -->
+    <mxCell id="uc_submit_report" value="Submit Report" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="110" y="445" width="130" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- 7. View Dashboard -->
+    <mxCell id="uc_view_dashboard" value="View Dashboard" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="85" y="605" width="130" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- 8. Comment on Posts -->
+    <mxCell id="uc_comment_posts" value="Comment on Posts" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="250" y="625" width="145" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- 9. Invite Members -->
+    <mxCell id="uc_invite_members" value="Invite Members" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="500" y="95" width="135" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- 10. Create Team -->
+    <mxCell id="uc_create_team" value="Create Team" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="640" y="55" width="120" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- 11. Manage Team Settings -->
+    <mxCell id="uc_manage_settings" value="Manage Team&#xa;Settings" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="sys_boundary">
+      <mxGeometry x="610" y="595" width="145" height="54" as="geometry"/>
+    </mxCell>
+
+    <!-- ASSOCIATIONS FROM USER (Left Actor) -->
+    <mxCell id="e_u_login" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_user" target="uc_login" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_u_team" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_user" target="uc_select_team" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_u_status" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_user" target="uc_update_status" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_u_checkin" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_user" target="uc_submit_checkin" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_u_tasks" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_user" target="uc_manage_tasks" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_u_report" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_user" target="uc_submit_report" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_u_dash" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_user" target="uc_view_dashboard" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_u_posts" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_user" target="uc_comment_posts" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ASSOCIATIONS FROM ADMIN (Right Actor) -->
+    <mxCell id="e_a_create" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_create_team" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_invite" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_invite_members" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_login" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_login" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_status" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_update_status" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_team" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_select_team" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_checkin" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_submit_checkin" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_tasks" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_manage_tasks" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_report" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_submit_report" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_dash" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_view_dashboard" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_posts" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_comment_posts" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e_a_settings" value="" style="endArrow=none;html=1;strokeColor=#111827;strokeWidth=1.2;" edge="1" source="actor_admin" target="uc_manage_settings" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
+  </diagram>
+</mxfile>

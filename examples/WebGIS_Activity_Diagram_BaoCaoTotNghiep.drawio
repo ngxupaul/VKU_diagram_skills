@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-09-15T23:16:01.963Z" agent="Antigravity/Draw.io" version="24.7.5">
+  <diagram id="webgis_activity_bw" name="Hình 1 - Activity Diagram WebGIS (Trắng Xám)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1150" pageHeight="920">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- SWIMLANES (Grayscale: White/Light Gray, Black borders) -->
+    <!-- Lane 1: Nguoi dung -->
+    <mxCell id="lane_user" value="1. Người dùng (Cán bộ / Sinh viên)" style="swimlane;startSize=34;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.5;fontStyle=1;fontSize=13;fontColor=#111827;align=center;collapsible=0;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="30" width="250" height="840" as="geometry"/>
+    </mxCell>
+
+    <!-- Lane 2: Client WebGIS -->
+    <mxCell id="lane_client" value="2. Trình duyệt (WebGIS &amp; Dashboard)" style="swimlane;startSize=34;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontStyle=1;fontSize=13;fontColor=#111827;align=center;collapsible=0;html=1;" vertex="1" parent="1">
+      <mxGeometry x="290" y="30" width="260" height="840" as="geometry"/>
+    </mxCell>
+
+    <!-- Lane 3: Server Python -->
+    <mxCell id="lane_server" value="3. Server Python (REST API server.py)" style="swimlane;startSize=34;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.5;fontStyle=1;fontSize=13;fontColor=#111827;align=center;collapsible=0;html=1;" vertex="1" parent="1">
+      <mxGeometry x="550" y="30" width="270" height="840" as="geometry"/>
+    </mxCell>
+
+    <!-- Lane 4: Storage -->
+    <mxCell id="lane_storage" value="4. Lớp lưu trữ dữ liệu (JSON / GeoJSON / Backup)" style="swimlane;startSize=34;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontStyle=1;fontSize=13;fontColor=#111827;align=center;collapsible=0;html=1;" vertex="1" parent="1">
+      <mxGeometry x="820" y="30" width="270" height="840" as="geometry"/>
+    </mxCell>
+
+    <!-- NODES IN LANE 1: Nguoi dung -->
+    <mxCell id="act_start" value="" style="ellipse;fillColor=#000000;strokeColor=none;html=1;" vertex="1" parent="lane_user">
+      <mxGeometry x="111" y="50" width="28" height="28" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_open" value="Truy cập hệ thống&#xa;(index.html / map.html)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_user">
+      <mxGeometry x="35" y="105" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_interact" value="Xem bản đồ thôn, lọc tổ,&#xa;bật tắt lớp &amp; xem hộ dân" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_user">
+      <mxGeometry x="35" y="275" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_draw" value="Vẽ mới / Chỉnh sửa&#xa;đối tượng (nhà, ranh giới)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_user">
+      <mxGeometry x="35" y="350" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_click_save" value="Nhấn nút &quot;Lưu bản đồ&quot;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_user">
+      <mxGeometry x="35" y="425" width="180" height="44" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_view_success" value="Quan sát đối tượng&#xa;được cập nhật trên bản đồ" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_user">
+      <mxGeometry x="35" y="720" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_stop" value="" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#000000;strokeWidth=2;html=1;" vertex="1" parent="lane_user">
+      <mxGeometry x="111" y="795" width="28" height="28" as="geometry"/>
+    </mxCell>
+
+    <!-- NODES IN LANE 2: Trinh duyet -->
+    <mxCell id="act_req_init" value="Tải giao diện, gửi request&#xa;GET /api/data &amp; summary" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_client">
+      <mxGeometry x="40" y="105" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_render" value="Render bản đồ Leaflet,&#xa;Dashboard ECharts &amp; bảng dữ liệu" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_client">
+      <mxGeometry x="40" y="195" width="180" height="48" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_send_post" value="Tạo payload GeoJSON&#xa;Gửi POST /api/save" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_client">
+      <mxGeometry x="40" y="425" width="180" height="44" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_toast_err" value="Hiển thị thông báo lỗi&#xa;(Validation Error Alert)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontSize=11;fontColor=#111827;" vertex="1" parent="lane_client">
+      <mxGeometry x="40" y="505" width="180" height="44" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_toast_ok" value="Hiển thị thông báo&#xa;&quot;Lưu bản đồ thành công&quot;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_client">
+      <mxGeometry x="40" y="720" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <!-- NODES IN LANE 3: Server Python -->
+    <mxCell id="act_srv_read" value="Nhận request, đọc file&#xa;dashboard-real.json &amp; GeoJSON" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_server">
+      <mxGeometry x="45" y="105" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_validate" value="Kiểm tra hợp lệ?&#xa;(Geometry &amp; FeatureCollection)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_server">
+      <mxGeometry x="45" y="495" width="180" height="64" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_resp_err" value="Trả về HTTP 400 Bad Request&#xa;kèm chi tiết lỗi cú pháp/geometry" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#E5E7EB;strokeColor=#4B5563;strokeWidth=1.5;fontSize=11;fontColor=#111827;" vertex="1" parent="lane_server">
+      <mxGeometry x="45" y="425" width="180" height="44" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_resp_ok" value="Trả về HTTP 200 OK&#xa;status: &quot;success&quot;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_server">
+      <mxGeometry x="45" y="720" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <!-- NODES IN LANE 4: Storage Layer -->
+    <mxCell id="act_db_fetch" value="Trả về dữ liệu bản đồ&#xa;latest-drawn.json &amp; số liệu" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_storage">
+      <mxGeometry x="45" y="195" width="180" height="48" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_backup" value="Sao lưu file hiện tại vào&#xa;backups/ (timestamp + checksum)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_storage">
+      <mxGeometry x="45" y="575" width="180" height="48" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="act_atomic" value="Ghi file tạm .tmp &amp;&#xa;Atomic Rename sang latest-drawn.json" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=11.5;fontColor=#111827;" vertex="1" parent="lane_storage">
+      <mxGeometry x="45" y="650" width="180" height="48" as="geometry"/>
+    </mxCell>
+
+    <!-- FLOW EDGES (Black & Dark Gray) -->
+    <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_start" target="act_open" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_open" target="act_req_init" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_req_init" target="act_srv_read" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_srv_read" target="act_db_fetch" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_db_fetch" target="act_render" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_render" target="act_interact" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_interact" target="act_draw" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_draw" target="act_click_save" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_click_save" target="act_send_post" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_send_post" target="act_validate" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- VALID BRANCH (YES) -->
+    <mxCell id="e11_yes" value="Hợp lệ (Yes)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;fontColor=#111827;fontStyle=1;" edge="1" source="act_validate" target="act_backup" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_backup" target="act_atomic" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_atomic" target="act_resp_ok" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_resp_ok" target="act_toast_ok" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_toast_ok" target="act_view_success" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1F2937;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_view_success" target="act_stop" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- INVALID BRANCH (NO) -->
+    <mxCell id="e11_no" value="Sai cấu trúc / Lỗi (No)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;fontColor=#374151;fontStyle=1;" edge="1" source="act_validate" target="act_resp_err" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" source="act_resp_err" target="act_toast_err" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e18" value="Sửa lại đối tượng" style="edgeStyle=orthogonalEdgeStyle;curved=1;dashed=1;html=1;strokeColor=#4B5563;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;fontColor=#374151;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="act_toast_err" target="act_draw" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
+  </diagram>
+</mxfile>
